@@ -75,10 +75,3 @@ class c:
         else:
             print("**| ERROR: when dividing with a complex number you must use another complex number or integer or float.")
             raise ValueError("ERROR!")
-        
-    
-c1 = c(2,2)
-c2 = c(1,1)
-c3 = c(1,1)
-print(c3.polar)
-print(c1/c2)
