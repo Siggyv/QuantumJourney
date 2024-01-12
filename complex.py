@@ -1,9 +1,11 @@
+import math
 class c:
     def __init__(self,a,b) -> None:
         self.a = a
         self.b = b
         self.mod = (self.a**2 + self.b**2) ** 0.5
         self.conjugate = (self.a, -self.b)
+        self.polar = ((self.a**2 + self.b**2) ** 0.5, math.atan(self.b/self.a))
     
     """
     Iterable method to allow unpacking, can be useful for quickly extracting components.
@@ -73,9 +75,10 @@ class c:
         else:
             print("**| ERROR: when dividing with a complex number you must use another complex number or integer or float.")
             raise ValueError("ERROR!")
-
+        
+    
 c1 = c(2,2)
 c2 = c(1,1)
-c3 = c(1,-1)
-print(c3.conjugate)
+c3 = c(1,1)
+print(c3.polar)
 print(c1/c2)
